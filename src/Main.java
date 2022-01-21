@@ -28,7 +28,7 @@ public class Main {
         }
 
         //comprobando numeros
-        for (int x=0; x< list.size()-aux; x++){
+        for (int x = 0; x < list.size()+1 - aux; x++){
 
             switch (list.get(x)){
                 case "0":
@@ -49,6 +49,17 @@ public class Main {
                     System.out.println("      "+"q0,0,D"+"      1 --> 0");
                     aux++;
                     break;
+                case" ":
+                    //System.out.println(list.size()-aux);
+                    if (x == list.size()-aux){
+                        System.out.println("         q1,B,I");
+                        resultado();
+                    }else {
+                        System.out.println("Datos no Validos");
+                        list.clear();
+                    }
+
+                    break;
 
                 default:
                     System.out.println("El numero: "+list.get(x)+" no es valido, solo se aceptan 0's y 1's");
@@ -58,13 +69,17 @@ public class Main {
         }
 
         //imprimiendo resultado
-        if (list.size() != 0){
-            System.out.print("\nCadena convertida: ");
-            for (int j=0;j<list.size();j++){
-                System.out.print(list.get(j));
-            }
-            list.clear();
+//        if (list.size() != 0){
+//            resultado();
+//        }
+    }
+
+    public static void resultado(){
+        System.out.print("\nCadena convertida: ");
+        for (int j=0;j<list.size();j++){
+            System.out.print(list.get(j));
         }
+        list.clear();
 
     }
 
