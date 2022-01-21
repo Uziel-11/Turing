@@ -50,7 +50,7 @@ public class Main {
                     aux++;
                     break;
                 case" ":
-                    //System.out.println(list.size()-aux);
+                    //validando Vacio
                     if (x == list.size()-aux){
                         System.out.println("         q1,B,I");
                         resultado();
@@ -68,10 +68,6 @@ public class Main {
 
         }
 
-        //imprimiendo resultado
-//        if (list.size() != 0){
-//            resultado();
-//        }
     }
 
     public static void resultado(){
